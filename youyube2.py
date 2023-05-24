@@ -1,4 +1,5 @@
-import yt_dlp as youtube_dl # client to many multimedia portals
+import yt_dlp as youtube_dl  # client to many multimedia portals
+
 
 # downloads yt_url to the same directory from which the script runs
 def download_audio(yt_url):
@@ -13,8 +14,10 @@ def download_audio(yt_url):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([yt_url])
 
+
 def main():
-    yt_url = "https://www.youtube.com/watch?v=G9CVOSRkxUs"
+    yt_url = input('Enter youtube link: ')
     download_audio(yt_url)
+
 
 main()
